@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device: MyString
+  serial_number: MyString
+  condition: MyString
+
+two:
+  device: MyString
+  serial_number: MyString
+  condition: MyString

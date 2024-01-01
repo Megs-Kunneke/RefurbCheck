@@ -1,0 +1,17 @@
+<%= simple_form_for @spec_check do |f| %>
+  <!-- Descriptive text fields -->
+  <%= f.input :device %>
+  <%= f.input :serial_number %>
+  <!-- Add other descriptive text fields here -->
+
+  <!-- Boolean fields -->
+  <%= f.input :bluetooth, as: :boolean %>
+  <%= f.input :wireless_lan, as: :boolean %>
+  <!-- Add other boolean fields here -->
+
+  <!-- Integer fields -->
+  <%= f.input :ram_size %>
+  <!-- Add other integer fields here -->
+
+  <%= f.button :submit %>
+<% end %>

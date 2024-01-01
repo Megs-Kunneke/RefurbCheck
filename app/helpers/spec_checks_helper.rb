@@ -1,0 +1,2 @@
+module SpecChecksHelper
+end
