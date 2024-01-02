@@ -1,17 +1,23 @@
-<%= simple_form_for @spec_check do |f| %>
+<%= simple_form_for @spec_check, html: { class: 'bootstrap-form' } do |f| %>
   <!-- Descriptive text fields -->
-  <%= f.input :device %>
-  <%= f.input :serial_number %>
+  <%= f.input :device, input_html: { class: 'form-control' } %>
+  <%= f.input :serial_number, input_html: { class: 'form-control' } %>
   <!-- Add other descriptive text fields here -->
 
   <!-- Boolean fields -->
-  <%= f.input :bluetooth, as: :boolean %>
-  <%= f.input :wireless_lan, as: :boolean %>
+  <div class="form-check">
+    <%= f.input :bluetooth, as: :boolean, label: false, wrapper_class: 'form-check-input' %>
+    <%= f.label :bluetooth, class: 'form-check-label' %>
+  </div>
+  <div class="form-check">
+    <%= f.input :wireless_lan, as: :boolean, label: false, wrapper_class: 'form-check-input' %>
+    <%= f.label :wireless_lan, class: 'form-check-label' %>
+  </div>
   <!-- Add other boolean fields here -->
 
   <!-- Integer fields -->
-  <%= f.input :ram_size %>
+  <%= f.input :ram_size, input_html: { class: 'form-control' } %>
   <!-- Add other integer fields here -->
 
-  <%= f.button :submit %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
